@@ -1,4 +1,4 @@
-
+---
 title: 'text2sdg: An open-source solution to monitoring sustainabledevelopment goals from text'
 tags:
   - R
@@ -21,6 +21,8 @@ affiliations:
    index: 2
 date: 13 August 2017
 bibliography: paper.bib
+---
+
 
 
 # Summary
