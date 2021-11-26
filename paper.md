@@ -17,7 +17,7 @@ authors:
 affiliations:
  - name: University of Basel
    index: 1
-- name: Max Planck Institute for Human Development
+ - name: Max Planck Institute for Human Development
    index: 2
 date: 13 August 2017
 bibliography: paper.bib
