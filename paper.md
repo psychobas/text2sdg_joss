@@ -45,7 +45,7 @@ Figure \ref{example} shows a search example and a number of results for this dat
 
 # Features
 
-The `detect_sdg()` function identifies SDGs in texts that are provided via the `text` argument. The example below runs the `detect_sdg()` for the `projects` data set included in the package prints the results. The data set is character vector containing 500 descriptions of randomly selected University of Basel research projects that were funded by the Swiss National Science Foundation (https://p3.snf.ch/). The analysis produced a total of 461 matches using the three default query systems Aurora, Elsevier, and SIRIS.
+The `detect_sdg()` function identifies SDGs in texts that are provided via the `text` argument. The example below runs the `detect_sdg()` for the `projects` data set included in the package and prints the results. The data set is a character vector containing 500 descriptions of randomly selected University of Basel research projects that were funded by the Swiss National Science Foundation (https://p3.snf.ch/). The analysis produced a total of 461 matches using the three default query systems Aurora, Elsevier, and SIRIS.
 
 ```
 # detecting SDGs in projects
