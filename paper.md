@@ -38,7 +38,7 @@ There are currently five leading approaches to monitoring SDGs from text. The mo
 
 We alleviate these shortcomings by providing an open-source solution, `text2sdg`, that lets users detect SDGs in any kind of text using any of the above-mentioned systems or, even, customized, user-made query systems. The package provides a common framework to implement the different extant approaches and makes it easy to quantitatively compare and visualize their results. We showcase its potential with an analysis of a publicly available database of research projects funded by the Swiss National Science Foundation (https://p3.snf.ch).
 
-![Caption for example figure\label{example}](paper_figure.pdf) 
+![Analysis of 26,811 research projects funded by the Swiss National Science Foundation using the different query and keyword systems available in text2sdg.\label{example}](paper_figure.pdf) 
 
 Figure \ref{example} shows a search example and a number of results for this database comparing the different search systems available (i.e., Aurora, SIRIS, Elsevier, SSDN, Ontology). We highlight only three main results here. First and foremost, the results show it is possible to systematically map SDGs to text from sources other than citation databases. Second, as can be seen in panels B-D, the results suggest important and sizable differences between query systems in both the number of hits and the profiles of most researched SDGs, suggesting it is important to question the results from any single approach. Third, the results suggest that the SDGs vary considerably in their overlap (panel E), emphasizing the promise and challenges of tackling different SDGs simultaneously.
 
