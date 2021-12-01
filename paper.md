@@ -38,42 +38,15 @@ There are currently five leading approaches to monitoring SDGs from text. The mo
 
 We alleviate these shortcomings by providing an open-source solution, `text2sdg`, that lets users detect SDGs in any kind of text using any of the above-mentioned systems or, even, customized, user-made query systems. The package provides a common framework to implement the different extant approaches and makes it easy to quantitatively compare and visualize their results. We showcase its potential with an analysis of a publicly available database of research projects funded by the Swiss National Science Foundation (https://p3.snf.ch).
 
-![Analysis of 26,811 research projects funded by the Swiss National Science Foundation using the different query and keyword systems available in text2sdg.\label{example}](paper_figure.pdf) 
+!{Analysis of 26,811 research projects funded by the Swiss National Science Foundation using the different query and keyword systems available in `text2sdg`. Panel A illustrates the identification of SDGs based on a query search: The example shows an excerpt of one abstract with some terms highlighted that match a query of the Aurora query system indicating SDG-14 (i.e., conserve and sustainably use the oceans, seas and marine resources for sustainable development). Panel B shows the number of hits per document for the different systems made available in `text2sdg`, which reveals striking differences in numbers of hits. Panel C shows the correlations between query systems, which reveal overall small to medium levels of correspondence between them. Panel C shows the relative number of hits per SDG cumulatively across systems. Panel D shows the correlation between detected SDGs over all query systems.\label{example}](paper_figure_2.pdf) 
 
 Figure \ref{example} shows a search example and a number of results for this database comparing the different search systems available (i.e., Aurora, SIRIS, Elsevier, SSDN, Ontology). We highlight only three main results here. First and foremost, the results show it is possible to systematically map SDGs to text from sources other than citation databases. Second, as can be seen in panels B-D, the results suggest important and sizable differences between query systems in both the number of hits and the profiles of most researched SDGs, suggesting it is important to question the results from any single approach. Third, the results suggest that the SDGs vary considerably in their overlap (panel E), emphasizing the promise and challenges of tackling different SDGs simultaneously.
 
 
 # Features
 
-The `detect_sdg()` function identifies SDGs in texts that are provided via the `text` argument. The example below runs the `detect_sdg()` for the `projects` data set included in the package and prints the results. The data set is a character vector containing 500 descriptions of randomly selected University of Basel research projects that were funded by the Swiss National Science Foundation (https://p3.snf.ch/). The analysis produced a total of 461 matches using the three default query systems Aurora, Elsevier, and SIRIS.
+The `detect_sdg()` function identifies SDGs in texts that are provided via the `text` argument. By default, the three query systems Aurora, Elsevier, and SIRIS are used and queries for all SDGs are run. Other query systems can be specified with the `system` argument and only a subset of SDGs can be specified with the `sdg` argument. With the `crosstab_sdg` function, users can extract either correlations between systems (Figure \ref{example} D) or between SDGs (Figure \ref{example} D). `text2sdg` also allows users to run user specified query systems with the `detect_any` function and provides functions to plot the results (`plot_sdg`, Figure \ref{example} C), see the package vignette (https://cran.r-project.org/web/packages/text2sdg/vignettes/text2sdg.html) for more details. 
 
-```
-# detecting SDGs in projects
-hits_default <- detect_sdg(projects)
-#>
-#> Running aurora queries
-#> Running siris queries
-#> Running elsevier queries
-hits_default
-#> # A tibble: 461 x 6
-#>    document sdg    system   query_id features                                hit
-#>  * <fct>    <chr>  <chr>       <int> <chr>                                 <int>
-#>  1 1        SDG-03 elsevier        3 tuberculosis, human, tuberculosis, d~     1
-#>  2 6        SDG-03 elsevier        3 cancer                                    2
-#>  3 8        SDG-03 elsevier        3 vaccine                                   3
-#>  4 14       SDG-03 elsevier        3 cancer, cardiovascular, disease, obe~     4
-#>  5 15       SDG-03 elsevier        3 disease, human, human, human, diseas~     5
-#>  6 17       SDG-13 elsevier       13 climate, prediction                       6
-#>  7 19       SDG-03 elsevier        3 mental, health, mental, health, ment~     7
-#>  8 19       SDG-03 siris         749 sleep, quality                            1
-#>  9 21       SDG-03 elsevier        3 human, medicine, health, human            8
-#> 10 22       SDG-03 elsevier        3 cancer, cancer, cancer, cancer, canc~     9
-#> # ... with 451 more rows
-```
-
-Using the function’s `system` argument the user can control which systems are run. With the "sdgs" Argument, a subset of SDGs that should be detected can be specified. `text2sdg` also allows users to run user specified query systems with the `detect_any` function and provides functions to plot the results (`plot_sdg`), see the package vignette (https://cran.r-project.org/web/packages/text2sdg/vignettes/text2sdg.html) for more details. 
-
-Also include `crosstab_sdg`?
 
 
 
