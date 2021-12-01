@@ -45,7 +45,7 @@ Figure \ref{example} shows a search example and a number of results for this dat
 
 # Features
 
-The `detect_sdg()` function identifies SDGs in texts that are provided via the `text` argument. By default, the three query systems Aurora, Elsevier, and SIRIS are used and queries for all SDGs are run. Other query systems can be specified with the `system` argument and only a subset of SDGs can be specified with the `sdg` argument. With the `crosstab_sdg` function, users can extract either correlations between systems (Figure \ref{example} D) or between SDGs (Figure \ref{example} D). `text2sdg` also allows users to run user specified query systems with the `detect_any` function and provides functions to plot the results (`plot_sdg`, Figure \ref{example} C), see the package vignette (https://cran.r-project.org/web/packages/text2sdg/vignettes/text2sdg.html) for more details. 
+The `detect_sdg()` function identifies SDGs in texts that are provided via the `text` argument. By default, the three query systems Aurora, Elsevier, and SIRIS are used and queries for all SDGs are run. Other query systems can be specified with the `system` argument and a subset of SDGs to be detected can be specified with the `sdgs` argument. With the `crosstab_sdg` function, users can extract either correlations between systems (Figure \ref{example} D) or between SDGs (Figure \ref{example} E). `text2sdg` also allows users to run user specified query systems with the `detect_any` function and provides the `plot_sdg` function to plot the results (Figure \ref{example} C), see the package vignette (https://cran.r-project.org/web/packages/text2sdg/vignettes/text2sdg.html) for more details. 
 
 
 
