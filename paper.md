@@ -47,7 +47,7 @@ Figure \ref{example} shows the results. We highlight three main findings. First 
 
 To facilitate further development of SDG query systems, `text2sdg` adidtionally includes the `detect_any` function, which permits users to run self-specified queries. We hope this function can be instrumental in future efforts to advance work that validates existing and future query systems and, therefore, can contribute to advancing the sustainable development goals.
 
-Learn more about the background and functionality of the package at https://dwulff.github.io/text2sdg. See the package vignette (https://dwulff.github.io/text2sdg/articles/text2sdg.html), which includes a reproducible analysis pipeline involving all functions and the package's `projects` dataset consisting of a random subset research project abstracts. 
+Learn more about the background and functionality of the package at https://dwulff.github.io/text2sdg. See the package vignette (https://dwulff.github.io/text2sdg/articles/text2sdg.html), which includes a reproducible analysis pipeline involving all functions and the package's `projects` dataset consisting of a random subset of research project abstracts. 
 
 # References
 
